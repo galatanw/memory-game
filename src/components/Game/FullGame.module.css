@@ -1,0 +1,13 @@
+.container{
+    width: 98vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.game{
+width: 80%;
+}
+.gameControls{
+    width: 20%;
+}

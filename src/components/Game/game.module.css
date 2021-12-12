@@ -1,0 +1,108 @@
+.memoryGameContainer{
+    position: relative;
+    width: 99%;
+    height: 99%;
+    border:1px solid purple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.game{
+    width: 89%;
+    padding: 5%;
+    border: 1px solid gold;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around ;
+    row-gap: 1px;
+}
+.pauseAndResume{
+    width: fit-content;
+    font-size: 200%;
+    background-color: transparent;
+    border: none;
+}
+.container{
+    position: relative;
+    width: 30%;
+}
+.container2{
+    position: relative;
+    width: 15%;
+}
+.container3{
+    position: relative;
+    width: 15%;
+}
+.gameOver{
+    width: 99%;
+    height: 99%;
+    top: 0;
+    position: absolute;
+    border: 3px solid teal;
+    background-color: rgba(0, 0, 0, 0.815);
+    z-index: 100;
+    color: red;
+    display: flex;
+    flex-direction:column ;
+    align-content: center;
+    overflow-y: auto;
+
+}
+.gameOver div{    
+    margin-left: 25%;
+    width: 50%;
+    border: 1px solid blue;
+    padding: 4%;
+    background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+    border-radius:10% ;
+    box-shadow:
+    2px 20px 0px white,
+    4px 20px 0px white,
+    2px 18px 0px white,
+    4px 16px 0px white,
+    6px 14px 0px white,
+    8px 12px 0px white,
+    10px 10px 0px white,
+    12px 10px 0px white,
+    14px 10px 0px white,
+    16px 10px 0px white;
+
+}
+
+.gameOver td,.gameOver th{
+    text-align: center;
+    border:1px solid white;
+    background-color: rgba(0, 0, 0, 0.815);
+
+}
+.try{
+    transition: 2s;
+    position: absolute;
+    background: black;
+    width: 100%;
+    height: 100%;
+}
+
+.card{
+background-color: white;
+width: 100%;
+height: 100%;
+text-overflow: clip;
+}
+.found{
+    animation: won 3s linear ;
+    animation-iteration-count: calc(1+1);
+}
+@keyframes won{
+    0%{
+    }
+    100%{
+        transform: rotate3d(1,0.1,0.1 ,360deg);
+    }
+}
+.revealed{
+    transition: 1s;
+    width: 0%;
+}
