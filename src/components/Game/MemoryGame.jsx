@@ -168,16 +168,16 @@ export default class MemoryGame extends Component {
     const games=JSON.parse(localStorage.getItem('memoryGame'))
     switch (this.state.cards.length){
         case 6:games.six.sort((a,b)=>{
-         return   a.time.hours*100+a.time.minutes*10+a.time.secondes-b.hours*100+b.minutes*10+b.secondes
+         return   (a.time.hours*100+a.time.minutes*10+a.time.secondes)-(b.time.hours*100+b.time.minutes*10+b.time.secondes)
         });
         console.log(games.six[0]);
         return this.bestTime=games.six[0]
         case 12:games.twelve.sort((a,b)=>{
-         return   a.time.hours*100+a.time.minutes*10+a.time.secondes-b.hours*100+b.minutes*10+b.secondes
+         return   (a.time.hours*100+a.time.minutes*10+a.time.secondes)-(b.time.hours*100+b.time.minutes*10+b.time.secondes)
         })
         return this.bestTime=games.twelve[0]
         case 24:games.six.sort((a,b)=>{
-           return a.time.hours*100+a.time.minutes*10+a.time.secondes-b.hours*100+b.minutes*10+b.secondes
+           return (a.time.hours*100+a.time.minutes*10+a.time.secondes)-(b.time.hours*100+b.time.minutes*10+b.time.secondes)
         })
         return this.bestTime=games.twentyFour[0]
         default:console.error("local Best Time Error"); break
