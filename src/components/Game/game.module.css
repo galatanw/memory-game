@@ -31,13 +31,13 @@
 }
 .container2{
     position: relative;
-    width: 15%;
-    height: 45vh
+    width: 30%;
+    height: 22vh
 }
 .container3{
     position: relative;
-    width: 15%;
-    height: 22vh
+    width: 22%;
+    height: 14vh
 }
 .gameOver{
     width: 99%;
