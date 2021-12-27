@@ -107,13 +107,16 @@ height: 100%;
 }
 .found{
     animation: won 2.5s linear ;
+    -webkit-animation: won 2.5s linear ;
     animation-iteration-count: calc(1+1);
+    -webkit-animation-iteration-count: calc(1+1);
 }
 @keyframes won{
     0%{
     }
     100%{
         transform: rotate3d(1,0.1,0.1 ,360deg);
+        -webkit-transform:rotate3d(1,0.1,0.1 ,360deg);
     }
 }
 .revealed{
