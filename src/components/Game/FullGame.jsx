@@ -4,10 +4,10 @@ import * as styles from './FullGame.module.css'
 export default class FullGame extends Component {
     state={startGame:false,array:[]}
      PicsArray=[
-     " https://i.ibb.co/5FkWbPC/wallpaperflare-com-wallpaper.jpg",
-"https://i.ibb.co/nsLcwkD/thumb-1920-587756.jpg",
-"https://i.ibb.co/GQnXZ7g/wallpaperflare-com-wallpaper-2.jpg",
-"https://i.ibb.co/jDVGxGp/wallpaperflare-com-wallpaper-1.jpg",
+     "https://i.ibb.co/4jgSrVq/Wallpaper-Dog-20382936.jpg",
+"https://i.ibb.co/G9jBmbh/Wallpaper-Dog-20382939.jpg",
+"https://i.ibb.co/Nr57G0K/Wallpaper-Dog-20377489.png",
+"https://i.ibb.co/cyNLWr7/Wallpaper-Dog-20382950.png",
 "https://i.ibb.co/SX986by/Goku-and-Shenron.png",
 "https://i.ibb.co/vLsd3CS/Shenron-Shenlong-The-Holy-Dragon-by-Zackary-on-Deviant-Art.jpg",
 "https://i.ibb.co/gZC15NG/Daizenshuu8-16.jpg",
