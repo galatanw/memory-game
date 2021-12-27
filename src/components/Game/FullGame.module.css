@@ -1,12 +1,15 @@
 .container{
-    width: 98vw;
-    height: 50vh;
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .game{
-width: 80%;
+width: 100%;
+height: 100%;
+background-image: url(https://c4.wallpaperflare.com/wallpaper/548/274/337/dbz-dragon-ball-z-goku-dragon-ball-super-wallpaper-preview.jpg);
+background-size: 100% 100%;
 }
 .gameControls{
     width: 20%;
