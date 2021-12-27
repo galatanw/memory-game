@@ -30,28 +30,28 @@ export default class FullGame extends Component {
 
       render(){
         return (
-        <div className={styles.container}>
-          <div className={styles.gameControls}>
-          {this.state.startGame?
-          <div>
-            <button onClick={()=>this.setState({startGame:false})}>new Game</button>
-          </div> :
-          <div className={styles.initialiseGame}>
-          <form onSubmit={this.startMemoryGame}>
-          <label className={styles.initialiseGameLabel} htmlFor="intialSelect">LEVEL</label><br/>
-          <select className={styles.initialiseGameInputs} name='intialSelect'><br/>
-            <option value="3" key="98">Rookie</option>
-            <option value="6" key="99">Expert</option>
-            <option value="12" key="100">Lengendery</option>
-          </select><br/>
+<div className={styles.container}>
+  <div className={styles.gameControls}>
+  {this.state.startGame?
+  <div className={styles.landing}>
+      <button className={styles.newGame} onClick={()=>this.setState({startGame:false})}>new Game</button>
+    </div> :
+    <div className={styles.initialiseGame}>
+        <form onSubmit={this.startMemoryGame}>
+            <label className={styles.initialiseGameLabel} htmlFor="intialSelect">LEVEL</label><br/>
+            <select className={styles.initialiseGameInputs} name='intialSelect'><br/>
+                <option value="3" key="98">Rookie</option>
+                <option value="6" key="99">Expert</option>
+                <option value="12" key="100">Lengendery</option>
+            </select><br/>
             <input className={styles.initialiseGameInputs} type="submit" value={"start"} />
-          </form>
-          <span><h1 >Dragon Ball <br /> The Memory Game</h1></span>
-          </div>
-          }</div>
-          
-          {this.state.startGame?<div className={styles.game}><MemoryGame cards={this.state.array}/></div>:null}
-        </div> 
+        </form>
+            <span><h1 >Dragon Ball <br /> The Memory Game</h1></span>
+    </div>}
+  </div>
+  {this.state.startGame?<div className={styles.game}><MemoryGame cards={this.state.array}/></div>:null}
+</div> 
       );
     }
 }
+
