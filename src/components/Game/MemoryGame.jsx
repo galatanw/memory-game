@@ -60,11 +60,10 @@ export default class MemoryGame extends Component {
         this.sortByBestTime()
         this.sortByMinimumTries()
         clearInterval(this.timer)
-        return this.setState({
-            gameover: true,
+        this.setState({
             cards: array
         })
-        
+        return setTimeout(()=>this.setState({gameover:true}),1500)
     }
 
     matchedCards=(array,index,secondIndex)=>{
@@ -73,7 +72,7 @@ export default class MemoryGame extends Component {
                 array[Number(secondIndex)].revealed = true
                 this.lastCliked = null
                 if (this.gameEndCounter === array.length / 2) {
-                this.gameWon(array,index,secondIndex)
+                this.gameWon(array,index,secondIndex) 
                 return 
                 }
                 this.setState({ cards: array })
@@ -95,7 +94,7 @@ export default class MemoryGame extends Component {
             array[Number(index)].revealed = false
             array[secondIndex].revealed = false
             this.setState({ cards: array })
-        }, 2000)
+        }, 1000)
         return
     }
     startTryCard=(index)=>{

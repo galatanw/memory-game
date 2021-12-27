@@ -4,10 +4,10 @@ import * as styles from './FullGame.module.css'
 export default class FullGame extends Component {
     state={startGame:false,array:[]}
      PicsArray=[
-     " https://i.ibb.co/8rvbyDp/Goku-Limit-Breaker-Torneo-del-Poder-DRAG-N.jpg",
-"https://i.ibb.co/MfwfpWJ/Dragon-Ball-Z-Red-Goku-IPhone-Wallpaper-IPhone-Wallpapers.jpg",
-"https://i.ibb.co/y6TmrHh/Dragon-Ball-Z-Super-Dbz-Poster-by-Breanna-Gulgowski-Displate.jpg",
-"https://i.ibb.co/vQhxwG3/DBZ-alternative-future-Gohan-ssj-2.jpg",
+     " https://i.ibb.co/5FkWbPC/wallpaperflare-com-wallpaper.jpg",
+"https://i.ibb.co/nsLcwkD/thumb-1920-587756.jpg",
+"https://i.ibb.co/GQnXZ7g/wallpaperflare-com-wallpaper-2.jpg",
+"https://i.ibb.co/jDVGxGp/wallpaperflare-com-wallpaper-1.jpg",
 "https://i.ibb.co/SX986by/Goku-and-Shenron.png",
 "https://i.ibb.co/vLsd3CS/Shenron-Shenlong-The-Holy-Dragon-by-Zackary-on-Deviant-Art.jpg",
 "https://i.ibb.co/gZC15NG/Daizenshuu8-16.jpg",
@@ -21,10 +21,17 @@ export default class FullGame extends Component {
     ]
     startMemoryGame=(e)=>{  
      e.preventDefault()
+     let counter=0
       const temp=[]
-      for (let index = 0; index < Number(e.target.intialSelect.value); index++) {
-      temp.push(this.PicsArray[index])
-    }
+      const used=[]
+      while(counter!==Number(e.target.intialSelect.value)){
+        let index=Math.floor(Math.random()*this.PicsArray.length)
+        if(used.indexOf(index)===-1){
+          used.push(index)
+          temp.push(this.PicsArray[index])      
+          counter++  
+        }
+      }
     this.setState({startGame:true,array:temp})
     }
 
