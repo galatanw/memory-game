@@ -7,10 +7,42 @@
 }
 .game{
 width: 100%;
-height: 100%;
+/* height: 100%; */
 background-image: url(https://c4.wallpaperflare.com/wallpaper/548/274/337/dbz-dragon-ball-z-goku-dragon-ball-super-wallpaper-preview.jpg);
 background-size: 100% 100%;
 }
 .gameControls{
-    width: 20%;
+    width: 100%;
+}
+.initialiseGame{
+    background-image: url(https://images7.alphacoders.com/611/thumb-1920-611138.png);
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color:linea;
+    justify-content: center;
+}
+.initialiseGameInputs{
+     color: gold;
+    background: rgb(5, 2, 31);
+    font-size:500% ;
+}
+.initialiseGameLabel{
+    color: gold;
+    text-shadow: 10px 10px 10px black;
+    background-color: rgba(57, 250, 250, 0.253);
+    font-size:400% ;
+}
+.initialiseGame span{
+    width: 50%;
+    margin-left: 25%;
+    background-color: rgba(214, 219, 219, 0.267);
+}
+.initialiseGame h1{
+font-size: 300%;
+background: -webkit-linear-gradient(teal, black);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }

@@ -27,15 +27,18 @@
 .container{
     position: relative;
     width: 30%;
+    height: 40vh
 }
 .container2{
     position: relative;
     width: 15%;
+    height: 22vh
 }
 .container3{
     font-size:large;
     position: relative;
     width: 15%;
+    height: 24vh
 }
 .gameOver{
     width: 99%;
@@ -72,9 +75,13 @@
     16px 10px 0px white;
 
 }
-
+.gameOver table{
+    width: 100%;
+    border: 10px red solid;
+}
 .gameOver td,.gameOver th{
-    text-align: center;
+    height: 25%;
+   text-align: center;
     border:1px solid white;
     background-color: rgba(0, 0, 0, 0.815);
 

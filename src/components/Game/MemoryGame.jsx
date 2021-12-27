@@ -210,14 +210,13 @@ export default class MemoryGame extends Component {
     }
     render() {
 
-        let curtain=this.state.cards.length==6?styles.container:styles.container2
+        let curtain=this.state.cards.length===6?styles.container:styles.container2
 
         return (
             <div className={styles.memoryGameContainer}>
-                
                 <button className={styles.pauseAndResume} onClick={this.pause} >⏸️</button>
                 {this.state.pause ? <div className={styles.gameOver}>
-                    <Pause time={this.state.time} resume={this.resume} gameEndCounter={this.gameEndCounter} style={styles.pauseAndResume}/>
+                    <Pause time={this.state.time} resume={this.resume} gameEndCounter={this.gameEndCounter} style={styles.pauseAndResume} moves={this.triesCount}/>
                 </div>:null
                 }
                 <h1>{this.state.time.hours}:{this.state.time.minutes}:{this.state.time.secondes}</h1>

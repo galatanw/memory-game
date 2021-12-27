@@ -22,7 +22,7 @@ export default class FullGame extends Component {
     startMemoryGame=(e)=>{  
      e.preventDefault()
       const temp=[]
-      for (let index = 0; index < Number(e.target.select.value); index++) {
+      for (let index = 0; index < Number(e.target.intialSelect.value); index++) {
       temp.push(this.PicsArray[index])
     }
     this.setState({startGame:true,array:temp})
@@ -32,17 +32,22 @@ export default class FullGame extends Component {
         return (
         <div className={styles.container}>
           <div className={styles.gameControls}>
-          {this.state.startGame?<div>
+          {this.state.startGame?
+          <div>
             <button onClick={()=>this.setState({startGame:false})}>new Game</button>
-          </div>:
+          </div> :
+          <div className={styles.initialiseGame}>
           <form onSubmit={this.startMemoryGame}>
-          <select name='select'>
-            <option value="3" key="98">6</option>
-            <option value="6" key="99">12</option>
-            <option value="12" key="100">24</option>
-          </select>
-            <input type="submit" value={"start"} />
+          <label className={styles.initialiseGameLabel} htmlFor="intialSelect">LEVEL</label><br/>
+          <select className={styles.initialiseGameInputs} name='intialSelect'><br/>
+            <option value="3" key="98">Rookie</option>
+            <option value="6" key="99">Expert</option>
+            <option value="12" key="100">Lengendery</option>
+          </select><br/>
+            <input className={styles.initialiseGameInputs} type="submit" value={"start"} />
           </form>
+          <span><h1 >Dragon Ball <br /> The Memory Game</h1></span>
+          </div>
           }</div>
           
           {this.state.startGame?<div className={styles.game}><MemoryGame cards={this.state.array}/></div>:null}
