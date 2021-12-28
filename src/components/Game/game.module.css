@@ -109,19 +109,19 @@ height: 100%;
 .found{
     animation: won 2.5s linear forwards;
     -webkit-animation: won 2.5s linear forwards ;
-    animation-iteration-count: calc(1+1);
-    -webkit-animation-iteration-count: calc(1+1);
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
 }
 @keyframes won{
-    0%{
-    }
-    100%{
-        transform: rotate3d(1,0.1,0.1 ,360deg);
-        -webkit-transform:rotate3d(1,0.1,0.1 ,360deg);
+    to{
+    transform: rotate3d(1,0.1,0.1 ,360deg);
+    -webkit-transform:rotate3d(1,0.1,0.1 ,360deg);
     filter:saturate(0);
+    -webkit-filter: saturate(0);
     }
 }
 .revealed{
     transition: 1s;
+    -webkit-transition: 1s;
     width: 0%;
 }
